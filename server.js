@@ -9,6 +9,14 @@ const port = 9000;
 // middlewares
 
 // db config
+const connection_url =
+  'mongodb+srv://admin:XmZyNupNO9GgkbFB@cluster0.toc9n.mongodb.net/tiktok?retryWrites=true&w=majority';
+
+mongoose.connect(connection_url, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+});
 
 // api endpoints
 app.get('/', (req, res) => res.status(200).send('hello world'));
